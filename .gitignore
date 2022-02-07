@@ -4,6 +4,9 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 
+### AWS Amazon S3 Config ###
+src/main/resources/config*
+
 ### STS ###
 .apt_generated
 .classpath
