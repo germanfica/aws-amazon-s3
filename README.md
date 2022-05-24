@@ -70,9 +70,36 @@ Open `src/main/resources/config/storage.properties`
 
 ```
 amazon.s3.bucket-name = your-bucket-name
-amazon.s3.region = your-bucket-region
-amazon.aws.credentials.access-key = your-acess-key
-amazon.aws.credentials.secret-access-key = your-secret-access-key
+amazon.s3.region = ${AWS_DEFAULT_REGION}
+amazon.aws.credentials.access-key = ${AWS_ACCESS_KEY_ID}
+amazon.aws.credentials.secret-access-key = ${AWS_SECRET_ACCESS_KEY}
+```
+
+### How to set environment variables
+
+For more security, create environment variables in your machine, `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, `AWS_DEFAULT_REGION` and populate it with IAM informations.
+
+Linux or macOS
+
+```shell
+export AWS_ACCESS_KEY_ID=AKIAIOSFODNN7EXAMPLE
+export AWS_SECRET_ACCESS_KEY=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+export AWS_DEFAULT_REGION=us-west-2
+```
+
+Windows Command Prompt
+
+```shell
+setx AWS_ACCESS_KEY_ID AKIAIOSFODNN7EXAMPLE
+setx AWS_SECRET_ACCESS_KEY wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+setx AWS_DEFAULT_REGION us-west-2
+```
+
+PowerShell
+```shell
+$Env:AWS_ACCESS_KEY_ID="AKIAIOSFODNN7EXAMPLE"
+$Env:AWS_SECRET_ACCESS_KEY="wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY"
+$Env:AWS_DEFAULT_REGION="us-west-2"
 ```
 
 ## Configure max size of upload file
