@@ -75,6 +75,15 @@ amazon.aws.credentials.access-key = your-acess-key
 amazon.aws.credentials.secret-access-key = your-secret-access-key
 ```
 
+## Configure max size of upload file
+
+Open `src/main/resources/application.properties`
+
+```
+spring.servlet.multipart.max-file-size=10MB
+spring.servlet.multipart.max-request-size=10MB
+```
+
 ## Run Spring Boot application
 ```
 mvn spring-boot:run
