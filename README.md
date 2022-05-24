@@ -20,6 +20,7 @@ Make sure you have the below requirements before starting:
 - [IntelliJ IDEA](https://www.jetbrains.com/idea/)
 - Basic Knowledge about Spring and Java
 - [AWS Account](https://aws.amazon.com/console/)
+- [IAM user with access-key and secret-access-key (user’s credentials)](https://lightsail.aws.amazon.com/ls/docs/en_us/articles/amazon-lightsail-managing-access-for-an-iam-user)
 - Amazon S3 bucket
 
 ## Download
